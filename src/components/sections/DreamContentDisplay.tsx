@@ -8,6 +8,7 @@ import { BreadcrumbJsonLd, ArticleJsonLd, FAQJsonLd, VideoJsonLd, ReviewJsonLd, 
 import { ChevronRight, BookOpen, Clock, Tag, MessageCircle, ShieldCheck, Share2, Sparkles, ArrowRight, PlusIcon, Twitter, Facebook, MessageSquare, Link2 } from 'lucide-react';
 import { TableOfContents } from './TableOfContents';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { BorderTrail } from '@/components/ui/border-trail';
@@ -87,13 +88,15 @@ export function DreamContentDisplay({ dream, locale, relatedDreams, dict, bondHi
 
                 {/* Featured Image Section */}
                 <div className="mb-12 rounded-2xl overflow-hidden border border-white/10 bg-black aspect-[21/9] relative group">
-                    <img
+                    <Image
                         src="https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp"
                         alt={dream.title}
+                        fill
+                        priority
                         className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 pointer-events-none" />
                     {/* Decorative Elements */}
                     <PlusIcon className="absolute -top-3 -left-3 size-6 text-white/20" />
                     <PlusIcon className="absolute -top-3 -right-3 size-6 text-white/20" />
@@ -109,19 +112,22 @@ export function DreamContentDisplay({ dream, locale, relatedDreams, dict, bondHi
                             <div className="sticky top-28 flex flex-col gap-1">
                                 <button
                                     onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(dream.title)}&url=${encodeURIComponent(window.location.href)}`, '_blank')}
-                                    className="w-9 h-9 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-blue-500/50 transition-all duration-300"
+                                    className="w-11 h-11 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-blue-500/50 transition-all duration-300 min-w-[44px] min-h-[44px]"
+                                    aria-label="Share on Twitter"
                                 >
                                     <Twitter size={14} className="text-gray-600 group-hover:text-white transition-colors" />
                                 </button>
                                 <button
                                     onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}
-                                    className="w-9 h-9 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-blue-600/50 transition-all duration-300"
+                                    className="w-11 h-11 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-blue-600/50 transition-all duration-300 min-w-[44px] min-h-[44px]"
+                                    aria-label="Share on Facebook"
                                 >
                                     <Facebook size={14} className="text-gray-600 group-hover:text-white transition-colors" />
                                 </button>
                                 <button
                                     onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(dream.title + ' ' + window.location.href)}`, '_blank')}
-                                    className="w-9 h-9 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-green-500/50 transition-all duration-300"
+                                    className="w-11 h-11 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-green-500/50 transition-all duration-300 min-w-[44px] min-h-[44px]"
+                                    aria-label="Share on WhatsApp"
                                 >
                                     <MessageSquare size={14} className="text-gray-600 group-hover:text-white transition-colors" />
                                 </button>
@@ -130,7 +136,8 @@ export function DreamContentDisplay({ dream, locale, relatedDreams, dict, bondHi
                                         navigator.clipboard.writeText(window.location.href);
                                         alert('Link kopyalandı!');
                                     }}
-                                    className="w-9 h-9 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-white/30 transition-all duration-300"
+                                    className="w-11 h-11 rounded bg-black border border-white/10 flex items-center justify-center group hover:border-white/30 transition-all duration-300 min-w-[44px] min-h-[44px]"
+                                    aria-label="Copy link"
                                 >
                                     <Link2 size={14} className="text-gray-600 group-hover:text-white transition-colors" />
                                 </button>

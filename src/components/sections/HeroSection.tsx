@@ -67,7 +67,7 @@ const Lightning: React.FC<LightningProps> = ({
       uniform float uIntensity;
       uniform float uSize;
       
-      #define OCTAVE_COUNT 10
+      #define OCTAVE_COUNT 6
 
       vec3 hsv2rgb(vec3 c) {
           vec3 rgb = clamp(abs(mod(c.x * 6.0 + vec3(0.0,4.0,2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
@@ -254,6 +254,8 @@ export const HeroSection: React.FC<{ dict: any; lang: Locale }> = ({ dict, lang 
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.8, x: 20 }}
                                 className="bg-black/60 backdrop-blur-3xl border border-white/10 p-4 sm:p-5 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] mb-2 w-56 sm:w-64 group/panel"
+                                role="dialog"
+                                aria-label={dict.hero.adjustHue}
                             >
                                 <div className="flex justify-between items-center mb-4">
                                     <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">{dict.hero.adjustHue}</span>
@@ -267,6 +269,7 @@ export const HeroSection: React.FC<{ dict: any; lang: Locale }> = ({ dict, lang 
                                         value={lightningHue}
                                         onChange={(e) => setLightningHue(Number(e.target.value))}
                                         className="w-full h-1.5 bg-white/5 rounded-full appearance-none cursor-pointer accent-blue-500 hover:accent-blue-400 transition-all"
+                                        aria-label="Adjust lightning color"
                                     />
                                     {/* Visual Track Glow */}
                                     <div
@@ -279,8 +282,9 @@ export const HeroSection: React.FC<{ dict: any; lang: Locale }> = ({ dict, lang 
                                         <button
                                             key={h}
                                             onClick={() => setLightningHue(h)}
-                                            className="w-full h-2 rounded-full transition-transform hover:scale-110"
+                                            className="w-full h-4 rounded-full transition-transform hover:scale-110 min-h-[16px]"
                                             style={{ backgroundColor: `hsl(${h}, 70%, 50%)` }}
+                                            aria-label={`Set color to ${h} degrees`}
                                         />
                                     ))}
                                 </div>
@@ -292,7 +296,9 @@ export const HeroSection: React.FC<{ dict: any; lang: Locale }> = ({ dict, lang 
                         whileHover={{ scale: 1.1, rotate: 15 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setShowHueControl(!showHueControl)}
-                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/10 flex items-center justify-center shadow-2xl transition-all duration-500 ${showHueControl ? 'bg-blue-500 shadow-blue-500/20 rotate-90' : 'bg-white/5 backdrop-blur-3xl hover:bg-white/10'}`}
+                        aria-label={showHueControl ? "Close color settings" : "Open color settings"}
+                        aria-expanded={showHueControl}
+                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/10 flex items-center justify-center shadow-2xl transition-all duration-500 min-w-[44px] min-h-[44px] ${showHueControl ? 'bg-blue-500 shadow-blue-500/20 rotate-90' : 'bg-white/5 backdrop-blur-3xl hover:bg-white/10'}`}
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={showHueControl ? 'text-white' : 'text-gray-400 group-hover:text-white'}>
                             <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
@@ -301,54 +307,42 @@ export const HeroSection: React.FC<{ dict: any; lang: Locale }> = ({ dict, lang 
                 </div>
 
                 <div className="flex-1 flex flex-col items-center justify-center text-center relative z-30 py-8 sm:py-12">
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="max-w-4xl"
-                    >
-
-                        <motion.button
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                    <div className="max-w-4xl opacity-100 transition-opacity duration-1000">
+                        <button
                             className="inline-flex items-center space-x-2 px-4 sm:px-6 py-2 bg-white/5 border border-white/10 hover:bg-white/10 backdrop-blur-sm rounded-full text-xs sm:text-sm mb-8 sm:mb-12 transition-all duration-300 group"
                         >
                             <span className="text-gray-300 group-hover:text-white">{dict.hero.badge}</span>
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="transform group-hover:translate-x-1 transition-transform duration-300">
                                 <path d="M8 3L13 8L8 13M13 8H3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                        </motion.button>
+                        </button>
 
-                        <motion.h1
-                            variants={itemVariants}
-                            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 tracking-tight leading-[1.2] sm:leading-[1.1]"
+                        <h1
+                            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 tracking-tight leading-[1.2] sm:leading-[1.1] text-white"
                         >
                             {dict.hero.title}
-                        </motion.h1>
+                        </h1>
 
-                        <motion.h2
-                            variants={itemVariants}
+                        <h2
                             className="text-lg sm:text-2xl md:text-3xl font-light mb-6 sm:mb-8 bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent px-4"
                         >
                             {dict.hero.subtitle}
-                        </motion.h2>
+                        </h2>
 
-                        <motion.p
-                            variants={itemVariants}
+                        <p
                             className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-6"
                         >
                             {dict.hero.description}
-                        </motion.p>
+                        </p>
 
-                        <motion.div variants={itemVariants} className="w-full">
+                        <div className="w-full">
                             <DreamSearch
                                 placeholder={dict.common.searchPlaceholder}
                                 buttonText={dict.common.search}
                                 lang={lang}
                             />
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

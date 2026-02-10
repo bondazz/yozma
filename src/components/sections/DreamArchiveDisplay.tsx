@@ -117,15 +117,17 @@ export function DreamArchiveDisplay({ dreams, locale, dict, title, h1, descripti
                 </header>
 
                 <div className="mb-12 border-y border-white/5 py-6">
-                    <div className="flex flex-wrap items-center justify-center gap-1.5 md:gap-2">
+                    <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3" role="group" aria-label="Filter by letter">
                         <button
                             onClick={() => router.push(`/${locale}/${categoryPaths[locale]}`)}
                             className={cn(
-                                "px-3 py-1 text-[8px] font-black uppercase tracking-widest transition-all rounded-full border",
+                                "h-11 px-4 flex items-center justify-center text-[10px] font-black transition-all rounded-full border min-w-[44px]",
                                 !selectedLetter
-                                    ? "bg-white text-black border-white"
+                                    ? "bg-white text-black border-white shadow-2xl"
                                     : "bg-white/5 text-gray-500 border-white/5 hover:border-white/20 hover:text-white"
                             )}
+                            aria-current={!selectedLetter ? "page" : undefined}
+                            aria-label="Show all"
                         >
                             {locale === 'az' ? 'HAMISI' : locale === 'tr' ? 'HEPSİ' : 'ALL'}
                         </button>
@@ -134,11 +136,13 @@ export function DreamArchiveDisplay({ dreams, locale, dict, title, h1, descripti
                                 key={letter}
                                 onClick={() => router.push(`/${locale}/${categoryPaths[locale]}/${letter.toLowerCase()}`)}
                                 className={cn(
-                                    "w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-[10px] font-black transition-all rounded-full border",
+                                    "w-11 h-11 flex items-center justify-center text-[10px] font-black transition-all rounded-full border min-w-[44px] min-h-[44px]",
                                     selectedLetter === letter
                                         ? "bg-blue-600 text-white border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.4)]"
                                         : "bg-white/5 text-gray-500 border-white/5 hover:border-white/20 hover:text-white"
                                 )}
+                                aria-current={selectedLetter === letter ? "page" : undefined}
+                                aria-label={`Filter by letter ${letter}`}
                             >
                                 {letter}
                             </button>
@@ -151,10 +155,10 @@ export function DreamArchiveDisplay({ dreams, locale, dict, title, h1, descripti
                     id="archive-listing"
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/10 relative shadow-2xl overflow-hidden rounded-2xl"
                 >
-                    <PlusIcon className="absolute -top-3 -left-3 size-6 text-white/30 z-20" />
-                    <PlusIcon className="absolute -top-3 -right-3 size-6 text-white/30 z-20" />
-                    <PlusIcon className="absolute -bottom-3 -left-3 size-6 text-white/30 z-20" />
-                    <PlusIcon className="absolute -bottom-3 -right-3 size-6 text-white/30 z-20" />
+                    <PlusIcon className="absolute -top-3 -left-3 size-6 text-white/30 z-20" aria-hidden="true" />
+                    <PlusIcon className="absolute -top-3 -right-3 size-6 text-white/30 z-20" aria-hidden="true" />
+                    <PlusIcon className="absolute -bottom-3 -left-3 size-6 text-white/30 z-20" aria-hidden="true" />
+                    <PlusIcon className="absolute -bottom-3 -right-3 size-6 text-white/30 z-20" aria-hidden="true" />
 
                     <AnimatePresence mode="popLayout">
                         {paginatedDreams.map((dream) => (
@@ -180,7 +184,7 @@ export function DreamArchiveDisplay({ dreams, locale, dict, title, h1, descripti
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                    <div className="mt-12 flex items-center justify-center gap-2">
+                    <nav className="mt-12 flex items-center justify-center gap-2" aria-label="Pagination">
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => {
                             const isCurrent = p === pageState;
                             return (
@@ -194,17 +198,19 @@ export function DreamArchiveDisplay({ dreams, locale, dict, title, h1, descripti
                                         router.push(`${baseUrl}${letterPart}${queryPart}`, { scroll: false });
                                     }}
                                     className={cn(
-                                        "w-10 h-10 flex items-center justify-center rounded-xl font-black text-[10px] transition-all border",
+                                        "w-11 h-11 flex items-center justify-center rounded-xl font-black text-[10px] transition-all border min-w-[44px] min-h-[44px]",
                                         isCurrent
                                             ? "bg-white text-black border-white shadow-2xl"
                                             : "bg-white/5 text-gray-500 border-white/5 hover:border-white/20 hover:text-white"
                                     )}
+                                    aria-current={isCurrent ? "page" : undefined}
+                                    aria-label={`Go to page ${p}`}
                                 >
                                     {p}
                                 </button>
                             );
                         })}
-                    </div>
+                    </nav>
                 )}
 
                 {filteredDreams.length === 0 && (

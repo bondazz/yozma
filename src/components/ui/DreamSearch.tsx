@@ -41,7 +41,7 @@ export const DreamSearch: React.FC<DreamSearchProps> = ({ placeholder, buttonTex
     };
 
     return (
-        <div className="w-full max-w-2xl mx-auto px-4">
+        <div className="w-full max-w-2xl mx-auto px-4" role="search">
             <div className="relative group">
                 <motion.div
                     animate={{
@@ -57,11 +57,13 @@ export const DreamSearch: React.FC<DreamSearchProps> = ({ placeholder, buttonTex
                             transition={{ duration: loading ? 1.5 : 4, repeat: Infinity, ease: "linear" }}
                         />
                     )}
-                    <div className="pl-5 text-gray-500">
+                    <div className="pl-5 text-gray-500" aria-hidden="true">
                         {loading ? <Loader2 size={18} className="text-blue-500 animate-spin" /> : <BrainCircuit size={18} className={isFocused ? 'text-white' : ''} />}
                     </div>
 
+                    <label htmlFor="dream-search-input" className="sr-only">{placeholder}</label>
                     <input
+                        id="dream-search-input"
                         type="text"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
@@ -69,16 +71,17 @@ export const DreamSearch: React.FC<DreamSearchProps> = ({ placeholder, buttonTex
                         onBlur={() => setIsFocused(false)}
                         onKeyPress={(e) => e.key === 'Enter' && handleInterpret()}
                         placeholder={placeholder}
-                        className="w-full py-4 px-4 bg-transparent text-white placeholder:text-gray-700 outline-none text-base md:text-lg font-light"
+                        className="w-full py-5 px-4 bg-transparent text-white placeholder:text-gray-700 outline-none text-base md:text-lg font-light"
                     />
 
                     <div className="pr-3">
                         <button
                             onClick={handleInterpret}
                             disabled={loading || !query.trim()}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all duration-300 font-bold text-sm ${query.length > 0 && !loading ? 'bg-white text-black shadow-lg hover:bg-gray-100 active:scale-95' : 'bg-white/5 text-gray-600 cursor-not-allowed'}`}
+                            aria-label={buttonText}
+                            className={`flex items-center gap-2 px-5 py-3 rounded-xl transition-all duration-300 font-bold text-sm min-h-[44px] min-w-[44px] ${query.length > 0 && !loading ? 'bg-white text-black shadow-lg hover:bg-gray-100 active:scale-95' : 'bg-white/5 text-gray-600 cursor-not-allowed'}`}
                         >
-                            {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+                            {loading ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : <Sparkles size={16} aria-hidden="true" />}
                             <span className="hidden sm:inline">{loading ? "..." : buttonText}</span>
                         </button>
                     </div>
