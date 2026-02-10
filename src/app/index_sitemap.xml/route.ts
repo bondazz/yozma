@@ -2,6 +2,7 @@ import { locales } from '@/i18n/config';
 import { getBaseUrl } from '@/lib/utils/url';
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
 export async function GET() {
     const baseUrl = getBaseUrl();
 
