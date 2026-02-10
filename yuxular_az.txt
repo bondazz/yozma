@@ -1,0 +1,467 @@
+// Bura hər sətirdə bir dənə yuxu başlığı (Azərbaycan dilində) əlavə edin.
+// Sonra çata gəlib "yarat az" yazın.
+Yuxuda ağ qızılgül görmək
+
+Yuxuda axsaq adam görmək
+
+Yuxuda axsaq heyvan görmək
+
+Yuxuda axsaq adamın qaçması
+
+Yuxuda axsaq adamla yol getmək
+
+Yuxuda axşam yeməyi yemək
+
+Yuxuda axşam günəşini görmək
+
+Yuxuda axşam sərinliyini hiss etmək
+
+Yuxuda axşam namazı qılmaq
+
+Yuxuda akvarium görmək
+
+Yuxuda akvariumda balıq bəsləmək
+
+Yuxuda akvariumun sınması
+
+Yuxuda akvariumda çirkin su görmək
+
+Yuxuda akvariumda qızıl balıq görmək
+
+Yuxuda akustika görmək
+
+Yuxuda alaçıq görmək
+
+Yuxuda alətlər qutusu görmək
+
+Yuxuda alətlərlə nəsə düzəltmək
+
+Yuxuda alış-veriş etmək
+
+Yuxuda alış-veriş arabası görmək
+
+Yuxuda alma qurdu görmək
+
+Yuxuda alma ağacının altında oturmaq
+
+Yuxuda alverçi görmək
+
+Yuxuda alver etmək
+
+Yuxuda alverçidən nəsə almaq
+
+Yuxuda Amerika görmək
+
+Yuxuda amerikalı ilə danışmaq
+
+Yuxuda Amerikanın xəritəsini görmək
+
+Yuxuda anket doldurmaq
+
+Yuxuda anket doldurmaq
+
+Yuxuda anket imzalamaq
+
+Yuxuda ansambl görmək
+
+Yuxuda ansamblın çıxışını izləmək
+
+Yuxuda ansamblın məşqini görmək
+
+Yuxuda antena görmək
+
+Yuxuda antena qurmaq
+
+Yuxuda aptek görmək
+
+Yuxuda aptekdə növbəyə durmaq
+
+Yuxuda aptekdə dərman axtarmaq
+
+Yuxuda aptekdə işləmək
+
+Yuxuda araq içmək
+
+Yuxuda araq şüşəsi görmək
+
+Yuxuda araq tökmək
+
+Yuxuda araq stəkanı görmək
+
+Yuxuda araba görmək
+
+Yuxuda araba sürmək
+
+Yuxuda araba təkəri görmək
+
+Yuxuda arabanın aşması
+
+Yuxuda araba sürməyi öyrənmək
+
+Yuxuda araba təkərinin çıxması
+
+Yuxuda arı görmək
+
+Yuxuda arı sancması
+
+Yuxuda arı pətəyi görmək
+
+Yuxuda arı sancmasından şişmək
+
+Yuxuda arı sürüsü görmək
+
+Yuxuda arı südü görmək
+
+Yuxuda arı tərəfindən qovalanmaq
+
+Yuxuda arı yuvasını dağıtmaq
+
+Yuxuda arı sancmasından qaçmaq
+
+Yuxuda arıqladığını görmək
+
+Yuxuda arıqlamaq üçün idman etmək
+
+Yuxuda arxa tərəf görmək
+
+Yuxuda arxadan vurulmaq
+
+Yuxuda arxadan itələnmək
+
+Yuxuda arxeoloq görmək
+
+Yuxuda arxeoloji qazıntı görmək
+
+Yuxuda arxeoloji tapıntı görmək
+
+Yuxuda arxeoloqla söhbət etmək
+
+Yuxuda arxiv görmək
+
+Yuxuda arxiv sənədlərini vərəqləmək
+
+Yuxuda arxivdə gizlənmək
+
+Yuxuda arzusu çin olmaq
+
+Yuxuda asan iş görmək
+
+Yuxuda asanlıqla qalib gəlmək
+
+Yuxuda asansör (lift) görmək
+
+Yuxuda asansördə (liftdə) qalmaq
+
+Yuxuda asansörün düşməsi
+
+Yuxuda asansörün qapısının açılmaması
+
+Yuxuda asılqan görmək
+
+Yuxuda asılqanda palto görmək
+
+Yuxuda asılqanın qırılması
+
+Yuxuda aslan görmək
+
+Yuxuda aslanın kükrəməsini eşitmək
+
+Yuxuda aslanı ram etmək
+
+Yuxuda aslan sürüsü görmək
+
+Yuxuda aslanla döyüşmək
+
+Yuxuda aslan pəncəsi görmək
+
+Yuxuda aslan balası görmək
+
+Yuxuda asqırmaq
+
+Yuxuda asudə vaxt keçirmək
+
+Yuxuda asiman (göy üzü) görmək
+
+Yuxuda asmaq
+
+Yuxuda asfalt görmək
+
+Yuxuda asfalta su tökmək
+
+Yuxuda asfaltın çatlaması
+
+Yuxuda asfalt çəkilməsini görmək
+
+Yuxuda aş yemək
+
+Yuxuda aş qazanı görmək
+
+Yuxuda aş paylamaq
+
+Yuxuda aş süzmək
+
+Yuxuda aşpaz görmək
+
+Yuxuda aşpaz papağı görmək
+
+Yuxuda aşpazla mübahisə etmək
+
+Yuxuda aşiq olmaq
+
+Yuxuda aşiq olduğu adamı görmək
+
+Yuxuda aşiq olduğu adamla gəzmək
+
+Yuxuda at görmək
+
+Yuxuda at çapmaq
+
+Yuxuda atdan düşmək
+
+Yuxuda at nalı görmək
+
+Yuxuda at arabasına minmək
+
+Yuxuda atın dişləməsi
+
+Yuxuda atın kişnəməsini eşitmək
+
+Yuxuda at yarışı görmək
+
+Yuxuda at kəlləsi görmək
+
+Yuxuda at yəhəri görmək
+
+Yuxuda at nalının tapılması
+
+Yuxuda at naxırı görmək
+
+Yuxuda ata görmək
+
+Yuxuda atanı ölmüş görmək
+
+Yuxuda ata ilə mübahisə etmək
+
+Yuxuda atanı gülümsəyən görmək
+
+Yuxuda ata yurdunu görmək
+
+Yuxuda ata ilə gəzmək
+
+Yuxuda atalar sözü demək
+
+Yuxuda atəş açmaq
+
+Yuxuda atəş açan adam görmək
+
+Yuxuda atəşin sönməsi
+
+Yuxuda atəş səsi eşitmək
+
+Yuxuda atəşpərəst görmək
+
+Yuxuda atəşpərəstlərin ibadətini görmək
+
+Yuxuda atəşfəşanlıq görmək
+
+Yuxuda atəşfəşanlığı izləmək
+
+Yuxuda atlet görmək
+
+Yuxuda atletika ilə məşğul olmaq
+
+Yuxuda avtomat görmək
+
+Yuxuda avtomat silah görmək
+
+Yuxuda avtomat səsi eşitmək
+
+Yuxuda avtobus görmək
+
+Yuxuda avtobus dayanacağı görmək
+
+Yuxuda avtobusu qaçırmaq
+
+Yuxuda avtobusda yatmaq
+
+Yuxuda avtobusu saxlamaq
+
+Yuxuda avtomobil qəzası görmək
+
+Yuxuda avtomobil sürmək
+
+Yuxuda avtomobil yumaq
+
+Yuxuda avtomobil təkəri dəyişmək
+
+Yuxuda avtomobil oğurlamaq
+
+Yuxuda avtomobilin yanması
+
+Yuxuda avtomobil yarışı görmək
+
+Yuxuda avtomobil almaq
+
+Yuxuda avtomobil satmaq
+
+Yuxuda avtoşluq etmək
+
+Yuxuda avtoşluq edən birini görmək
+
+Yuxuda aypara və günəş görmək
+
+Yuxuda ayaq görmək
+
+Yuxuda ayaq qoxusu duymaq
+
+Yuxuda ayaqyolu görmək
+
+Yuxuda ayaqyolunda təmizlik etmək
+
+Yuxuda ayaqyolunda qapının bağlanmaması
+
+Yuxuda azan səsi eşitmək
+
+Yuxuda azan oxumaq
+
+Yuxuda azan oxunarkən dua etmək
+
+Yuxuda azan verən müəzzini görmək
+
+Yuxuda azan səsi ilə oyanmaq
+
+Yuxuda azmaq (yolunu itirmək)
+
+Yuxuda meşədə azmaq
+
+Yuxuda dənizdə azmaq
+
+Yuxuda şəhərdə azmaq
+
+Yuxuda meşədə yolunu azmaq
+
+Yuxuda azadlığa çıxmaq
+
+Yuxuda azadlıq şüarı demək
+
+Yuxuda azadlığın əlindən alınması
+
+Yuxuda azadlığın dadını çıxarmaq
+
+Yuxuda abidənin qarşısında şəkil çəkdirmək
+
+Yuxuda abunəçilərini görmək
+
+Yuxuda acı bibər turşusu görmək
+
+Yuxuda açar zənciri görmək
+
+Yuxuda admiral papağı görmək
+
+Yuxuda aerodrom görmək
+
+Yuxuda afişa yapışdırmaq
+
+Yuxuda ağ örpək görmək
+
+Yuxuda ağappaq dişlər görmək
+
+Yuxuda ağac dibi qazmaq
+
+Yuxuda ağac kəpənəyi görmək
+
+Yuxuda ağac şirəsi görmək
+
+Yuxuda ağcaqanad vızıltısı eşitmək
+
+Yuxuda ağlamaq və gülmək birlikdə
+
+Yuxuda ağrıdan qıvrılmaq
+
+Yuxuda ağsaqqal əli öpmək
+
+Yuxuda ağız dolusu yemək
+
+Yuxuda ailə qəbiristanlığı görmək
+
+Yuxuda axsaq adamdan qaçmaq
+
+Yuxuda ayaqqabı vitrini görmək
+
+Yuxuda ayaqqabı çəkməcəsi görmək
+
+Yuxuda ayaq barmağının kəsilməsi
+
+Yuxuda ayını zəncirdə görmək
+
+Yuxuda ayın şəkli görmək
+
+Yuxuda aynada saç daramaq
+
+Yuxuda ayrılıq qorxusu yaşamaq
+
+Yuxuda akula hücumu görmək
+
+Yuxuda alovlu su görmək
+
+Yuxuda albalı tumu görmək
+
+Yuxuda alimdən dərs almaq
+
+Yuxuda azadlıq parkı görmək
+
+Yuxuda aviasiya görmək
+
+Yuxuda aviabilet almaq
+
+Yuxuda avtostop etmək
+
+Yuxuda avtoqraf almaq
+
+Yuxuda asqı görmək
+
+Yuxuda astronavt görmək
+
+Yuxuda astronomiya ilə maraqlanmaq
+
+Yuxuda aslan yalı görmək
+
+Yuxuda asfalta uzanmaq
+
+Yuxuda aş qazanı yumaq
+
+Yuxuda at yalını hörmək
+
+Yuxuda ata nəsihəti dinləmək
+
+Yuxuda atəşfəşanlıq izləmək
+
+Yuxuda ayın batmasını izləmək
+
+Yuxuda ayaq dırnağı kəsmək
+
+Yuxuda azan oxuyan görmək
+
+Yuxuda azadlıq heykəli görmək
+
+Yuxuda ağac qoxusu duymaq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

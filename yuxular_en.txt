@@ -1,0 +1,2 @@
+// Bura hər sətirdə bir dənə yuxu başlığı (İngiliscə) əlavə edin.
+// Sonra çata gəlib "yarat en" yazın.

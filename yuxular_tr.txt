@@ -1,0 +1,2 @@
+// Bura her satırda bir adet rüya başlığı (Türkçe) ekleyin.
+// Sonra chata gelip "yarat tr" yazın.
