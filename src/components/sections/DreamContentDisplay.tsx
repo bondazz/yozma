@@ -88,7 +88,7 @@ export function DreamContentDisplay({ dream, locale, relatedDreams, dict, bondHi
                 {/* Featured Image Section */}
                 <div className="mb-12 rounded-2xl overflow-hidden border border-white/10 bg-black aspect-[21/9] relative group">
                     <img
-                        src={`/${locale === 'az' ? 'yuxu_yozma.webp' : locale === 'tr' ? 'ruya_tabirleri.webp' : 'dream_meanings.webp'}`}
+                        src="https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp"
                         alt={dream.title}
                         className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
                     />

@@ -36,7 +36,7 @@ export async function generateDreamMetadata(slug: string, locale: string): Promi
             locale: locale,
             images: [
                 {
-                    url: dream.ogImage || `${baseUrl}/og-dream.jpg`,
+                    url: dream.ogImage || `https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`,
                     width: 1200,
                     height: 630,
                     alt: dream.title,
@@ -47,7 +47,7 @@ export async function generateDreamMetadata(slug: string, locale: string): Promi
             card: 'summary_large_image',
             title: dream.seoTitle || dream.title,
             description: dream.seoDescription || dream.excerpt,
-            images: [dream.ogImage || `${baseUrl}/og-dream.jpg`],
+            images: [dream.ogImage || `https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`],
         }
     };
 }
@@ -103,7 +103,7 @@ export async function generateArchiveMetadata(locale: string, letter?: string): 
             siteName: getBrandName(),
             images: [
                 {
-                    url: `${baseUrl}/${locale === 'az' ? 'yuxu_yozma.webp' : locale === 'tr' ? 'ruya_tabirleri.webp' : 'dream_meanings.webp'}`,
+                    url: `https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`,
                     width: 1200,
                     height: 630,
                     alt: titles[locale],
@@ -114,7 +114,7 @@ export async function generateArchiveMetadata(locale: string, letter?: string): 
             card: 'summary_large_image',
             title: titles[locale],
             description: descriptions[locale],
-            images: [`${baseUrl}/${locale === 'az' ? 'yuxu_yozma.webp' : locale === 'tr' ? 'ruya_tabirleri.webp' : 'dream_meanings.webp'}`],
+            images: [`https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`],
         }
     };
 }
@@ -163,7 +163,7 @@ export async function generateHomeMetadata(locale: string): Promise<Metadata> {
             siteName: getBrandName(),
             images: [
                 {
-                    url: `${baseUrl}/og-main.png`,
+                    url: `https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`,
                     width: 1200,
                     height: 630,
                     alt: `${getBrandName()} - Dream Interpretation`,
@@ -174,7 +174,7 @@ export async function generateHomeMetadata(locale: string): Promise<Metadata> {
             card: 'summary_large_image',
             title: titles[locale],
             description: descriptions[locale],
-            images: [`${baseUrl}/og-main.png`],
+            images: [`https://raw.githubusercontent.com/bondazz/yozma/refs/heads/main/public/yuxu_yozma.webp`],
         }
     };
 }
