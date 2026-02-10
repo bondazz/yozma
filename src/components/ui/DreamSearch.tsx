@@ -18,8 +18,8 @@ export const DreamSearch: React.FC<DreamSearchProps> = ({ placeholder, buttonTex
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<string | null>(null);
 
-    const isError = result?.startsWith("ERROR_TYPE_DREAM:");
-    const displayResult = isError ? result.replace("ERROR_TYPE_DREAM:", "").trim() : result;
+    const isError = result?.startsWith("ERROR_TYPE_DREAM:") ?? false;
+    const displayResult = (isError && result) ? result.replace("ERROR_TYPE_DREAM:", "").trim() : result;
 
     useEffect(() => {
         if (result) document.body.style.overflow = 'hidden';
@@ -121,7 +121,7 @@ export const DreamSearch: React.FC<DreamSearchProps> = ({ placeholder, buttonTex
                             {!isError && (
                                 <div className="px-6 pb-6 flex justify-end">
                                     <button
-                                        onClick={() => navigator.share && navigator.share({ title: 'Bond.az', text: displayResult }).catch(() => { })}
+                                        onClick={() => navigator.share && navigator.share({ title: 'Bond.az', text: displayResult ?? undefined }).catch(() => { })}
                                         className="flex items-center gap-2 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors"
                                     >
                                         <Share2 size={14} /> Paylaş

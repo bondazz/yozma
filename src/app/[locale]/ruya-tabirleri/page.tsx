@@ -16,9 +16,9 @@ export async function generateMetadata(
     return generateArchiveMetadata(params.locale, searchParams.letter);
 }
 
-export default async function Page(props: { params: Promise<{ locale: Locale }>; searchParams: Promise<{ letter?: string; page?: string }> }) {
+export default async function Page(props: { params: Promise<{ locale: string }>; searchParams: Promise<{ letter?: string; page?: string }> }) {
     const [params, searchParams] = await Promise.all([props.params, props.searchParams]);
-    const { locale } = params;
+    const locale = params.locale as Locale;
     const { letter, page } = searchParams;
     const currentPage = parseInt(page || '1');
 

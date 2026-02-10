@@ -14,19 +14,19 @@ import { AdBanner } from '@/components/ui/AdBanner';
 export const revalidate = 0; // Ensure fresh random data on every refresh
 
 export async function generateMetadata(
-    props: { params: Promise<{ locale: Locale }> }
+    props: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
     const params = await props.params;
-    return generateHomeMetadata(params.locale);
+    return generateHomeMetadata(params.locale as Locale);
 }
 
 export default async function Home(
     props: {
-        params: Promise<{ locale: Locale }>;
+        params: Promise<{ locale: string }>;
     }
 ) {
     const params = await props.params;
-    const { locale } = params;
+    const locale = params.locale as Locale;
     const dict = await getDictionary(locale);
     const dreams = await getRandomDreams(locale, 12);
 

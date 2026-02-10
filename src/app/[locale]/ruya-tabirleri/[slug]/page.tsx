@@ -4,6 +4,7 @@ import { DreamContentDisplay } from '@/components/sections/DreamContentDisplay';
 import { generateDreamMetadata, generateArchiveMetadata } from '@/lib/metadata-helper';
 import { Metadata } from 'next';
 import { getDictionary } from '@/i18n/get-dictionary';
+import { Locale } from '@/i18n/config';
 import React, { Suspense } from 'react';
 import { DreamArchiveDisplay } from '@/components/sections/DreamArchiveDisplay';
 
@@ -23,11 +24,12 @@ export async function generateMetadata(
 }
 
 export default async function Page(props: {
-    params: Promise<{ locale: any; slug: string }>;
+    params: Promise<{ locale: string; slug: string }>;
     searchParams: Promise<{ page?: string }>;
 }) {
     const [params, searchParams] = await Promise.all([props.params, props.searchParams]);
-    const { locale, slug } = params;
+    const locale = params.locale as Locale;
+    const { slug } = params;
     const currentPage = parseInt(searchParams.page || '1');
 
     if (locale !== 'tr') {

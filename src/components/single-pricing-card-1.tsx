@@ -2,10 +2,10 @@
 import React from 'react';
 import { PlusIcon, ShieldCheckIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Badge } from './badge';
-import { Button } from './button';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { BorderTrail } from './border-trail';
+import { BorderTrail } from './ui/border-trail';
 
 export function Pricing() {
 	return (
@@ -46,7 +46,7 @@ export function Pricing() {
 						transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
 						viewport={{ once: true }}
 						className="mx-auto w-full max-w-2xl space-y-2"
-					>	
+					>
 						<div className="grid md:grid-cols-2 bg-background relative border p-4">
 							<PlusIcon className="absolute -top-3 -left-3  size-5.5" />
 							<PlusIcon className="absolute -top-3 -right-3 size-5.5" />

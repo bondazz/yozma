@@ -1,4 +1,4 @@
-import { saveDreamPost, DreamPost } from './src/lib/dream-storage';
+import { saveDreamPost, DreamPost } from '../src/lib/dream-storage';
 import fs from 'fs';
 import path from 'path';
 
