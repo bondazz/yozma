@@ -11,6 +11,19 @@ const defaultLocale = 'az';
 export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
+    // 0. Explicitly ignore static and SEO files to prevent redirects/auth checks
+    if (
+        pathname.startsWith('/_next') ||
+        pathname.startsWith('/api') ||
+        pathname.includes('favicon.ico') ||
+        pathname === '/robots.txt' ||
+        pathname === '/index_sitemap.xml' ||
+        pathname.includes('/sitemap_') || // Catch /sitemap_az.xml etc
+        pathname === '/llms.txt'
+    ) {
+        return NextResponse.next();
+    }
+
     // 1. Locale Handling
     const pathnameIsMissingLocale = locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
@@ -45,5 +58,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|robots.txt|index_sitemap.xml|sitemap_.*\.xml|llms.txt).*)'],
+    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|robots\\.txt|index_sitemap\\.xml|sitemap_.*\\.xml|llms\\.txt).*)'],
 };
